@@ -22,7 +22,8 @@ setuptools.setup(
     ],
     packages=["pidi_display_tk"],
     install_requires=[
-        "pidi-display-pil>=0.1.0",
+        "pidi-display-pil @ git+https://github.com/mexisme/pidi-plugins.git#subdirectory=pidi-display-pil",
+
         "tk",
         "Pillow",
     ],

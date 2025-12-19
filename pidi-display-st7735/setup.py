@@ -21,7 +21,7 @@ setuptools.setup(
     ],
     packages=["pidi_display_st7735"],
     install_requires=[
-        "pidi-display-pil==git+https://github.com/ChrisIossa/pidi-plugins.git",
+        "pidi-display-pil @ git+https://github.com/mexisme/pidi-plugins.git#subdirectory=pidi-display-pil",
         "st7735",
         "Pillow",
     ],
