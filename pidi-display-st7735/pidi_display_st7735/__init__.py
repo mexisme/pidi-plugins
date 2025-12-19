@@ -31,8 +31,12 @@ class DisplayST7735(DisplayPIL):
         self._st7735.command(ST7735_DISPOFF)
 
     def redraw(self):
-        if DisplayPIL.redraw(self):
-            self._st7735.display(self._output_image)
+        if self._state == 'muted':
+            self.stop()
+        else:
+            self.start()
+            if DisplayPIL.redraw(self):
+                self._st7789.display(self._output_image)
 
     def add_args(argparse):
         """Add supplemental arguments for ST7735."""
